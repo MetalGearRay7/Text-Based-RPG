@@ -9,7 +9,7 @@
 <body>
     <Jacob>
         <form action="" id="StartSnowMountain">
-        <h2> You follow up the snowy ridden rocks of rock towards the snowy ridden mountains. 
+        <h2> You follow up the snowy ridden rocks of rock towards the snowy ridden mountains. <br>
             There is a path up the mountain and a path to the side which leads to a small cozy looking cabin. </h2>
         <p> Which path shall you take...? </p>
         <br>
@@ -20,11 +20,34 @@
         <form action="" id="CozyCabin" class="hidden">
         <h2> This cabin sure is cozy. </h2>
         <p> What would you like to do...? </p>
+        <input type="button" value="Sleep in the cozy bed." onclick="GoRest()" id="CozyBed">
+        <input type="button" value="Search the cozy cabin." onclick="GoCozySearch()" id="CozySearch">
+        <input type="button" value="Leave the cozy cabin." onclick="GoStartSnowMountain()">
         </form>
 
         <form action="" id="Mountain" class="hidden">
-        <h2> This mountain sure is mountain. </h2>
-        <p> What would you like to do...? </p>
+        <h2> As you head to the bottom of the mountain you notice there are two sides to scale up this mountain. </h2>
+        <p> What side would you wish to scale...? </p>
+        <input type="button" value="Left." onclick="GoMountainSideLeft()">
+        <!-- <input type="button" value="Left." onclick="GoMountainSideLeft(this)" id="Mountain"> -->
+        <input type="button" value="Right." onclick="GoMountainSideRight()">
+        </form>
+
+        <form action="" id="MountainSideLeft" class="hidden">
+        <h2> You decide to scale up the left side. <br>
+            Eventually on your climb you come across a few bodies which are leading away from a cave in the mountain.</h2>
+        <p> What would you like to do? </p>
+        <input type="button" value="Search bodies." onclick="GoSearchBodies()" id="SearchBodies">
+        <input type="button" value="Head into cave." onclick="GoMountainCave()">
+        <input type="button" value="Continue on climbing the mountain." onclick="GoMountainSideTop()">
+        </form>
+        
+        <form action="" id="MountainSideRight" class="hidden">
+        <h2> You decide to scale up the right side. <br> your climb brings you to a fairly large snowy forest. <br>
+            there is no way around this forest, you can only choose which opening in the forest to venture through</h2>
+        <p> Which side would you like to venture through? </p>
+        <input type="button" value="Left." onclick="GoMountainForestLeft()">
+        <input type="button" value="Right." onclick="GoMountainForestRight()">
         </form>
 
     </Jacob>
