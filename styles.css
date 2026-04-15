@@ -2,3 +2,11 @@
     color: GREEN;
     text-align: center;
 }
+
+div {
+    display: flex;
+    justify-content: center;
+}
+img {
+    margin-left: 600px;
+}
