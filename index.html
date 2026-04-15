@@ -11,42 +11,32 @@
 
     </jacob>
     <Adam>
-     <h1>
-        You find yourself stranded on a lakeside, not knowing of how you got here or where you even are.
-     </h1>
-        <h2>
-        You take a look at your surroundings, nothing but a calm wind in the air.
-        </h2>
-        <h2>
-        You spot a backpack nearby, inside are some basic supplies:
-        </h2>
-        <h2>
-        A dagger, a potion of healing, fresh food and water.
-        </h2>
-        <h2>
-        You pick it up and put it on your back.
-        </h2>
-        <h2>
-        Nearby is a dirt path out of this place, you begin to follow it.
-        </h2>
-
-        <form action="" id="StartSnowMountain">
-        <h2> You follow up the snowy ridden rocks of rock towards the snowy ridden mountains. 
-            There is a path up the mountain and a path to the side which leads to a small cozy looking cabin. </h2>
+        <form action="" id="StartLakeside">
+        <h2> You find yourself at a peaceful lakeside, next to it is a dirt path leading out of it, you begin walking down the path.</h2>
+        <h2>The path splits into 2, from the left side it looks like a ruined tower is nearby, it might have something useful inside.</h2>
+        <h2>On the right looks to be a campsite, absent of people, you could rob it of some supplies.</h2>
         <p> Which path shall you take...? </p>
         <br>
-        <input type="button" value="Left." onclick="GoCozyCabin()">
-        <input type="button" value="Right." onclick="GoMountain()">
+        <input type="button" value="Left." onclick="GoRuinedTower()">
+        <input type="button" value="Right." onclick="GoCampsite()">
         </form>
 
-        <form action="" id="CozyCabin" class="hidden">
-        <h2> This cabin sure is cozy. </h2>
+        <form action="" id="RuinedTower" class="hidden">
+        <h2> The interior of the tower is pretty barren and empty. There seems to be a chest nearby though. </h2>
         <p> What would you like to do...? </p>
+        <br>
+        <input type="button" value="Investigate Further." id=""  onclick="GoInvestigateTower()">
+        <input type="button" value="Open the Chest." id="" onclick="OpenTowerChest()">
+        <input type="button" value="Leave the Tower." id="" onclick="LeaveTower()">
         </form>
 
-        <form action="" id="Mountain" class="hidden">
-        <h2> This mountain sure is mountain. </h2>
+        <form action="" id="Campsite" class="hidden">
+        <h2> The campsite looks to have some leftover supplies from the campers, the campfire still burns brightly. </h2>
         <p> What would you like to do...? </p>
+        <br>
+        <input type="button" value="Relax by the Fire." id="" onclick="CampRelax()">
+        <input type="button" value="Steal some Supplies" id="" onclick="StealCampSupplies()">
+        <input type="button" value="Leave the Campsite" id="" onclick="LeaveCampsite()">
         </form>
     </Adam>
     <Ray>
