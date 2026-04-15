@@ -10,3 +10,7 @@ div {
 img {
     margin-left: 600px;
 }
+
+.hidden {
+    display: none;
+}
