@@ -1,12 +1,14 @@
 function GoBOTW() {
-document.querySelector("#Start").classList.toggle("hidden");
+document.querySelector("#Menu-Start").classList.toggle("hidden");
+document.querySelector("#Adam-Start").classList.remove("hidden");
 }
 
 function GoSB() {
-document.querySelector("#Start").classList.toggle("hidden");
-
+document.querySelector("#Menu-Start").classList.toggle("hidden");
+document.querySelector("#Jacob-Start").classList.remove("hidden");
 }
 
 function GoRITJ() {
-document.querySelector("#Start").classList.toggle("hidden");
+document.querySelector("#Menu-Start").classList.toggle("hidden");
+document.querySelector("#Ray-Start").classList.remove("hidden");
 }
