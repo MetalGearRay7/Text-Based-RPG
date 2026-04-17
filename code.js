@@ -36,7 +36,7 @@ function StealCampSupplies()
 {
     document.querySelector("#StealCampSupplies").classList.toggle("hidden");
     document.querySelector("#Campsite").classList.toggle("hidden");
-    document.querySelector("#CampRelax").classList.toggle("hidden");
+    document.querySelector("#CampRelax").classList.remove("hidden");
 }
 
 function LeaveCampsite()
