@@ -25,9 +25,24 @@
         <h2> The interior of the tower is pretty barren and empty. There seems to be a chest nearby though. </h2>
         <p> What would you like to do...? </p>
         <br>
-        <input type="button" value="Investigate Further." id=""  onclick="GoInvestigateTower()">
         <input type="button" value="Open the Chest." id="" onclick="OpenTowerChest()">
         <input type="button" value="Leave the Tower." id="" onclick="LeaveTower()">
+        </form>
+
+        <form action="" id="OpenTowerChest" class="hidden">
+        <h2>As you try to open the chest, it turns out to be a mimic!</h2>
+        <p>What do you do?</p>
+        <br>
+        <input type="button" value="Hit it with your dagger!" id="" onclick="HitMimic()">
+        <input type="button" value="Run!" id="" onclick="RunFromTower()">    
+        </form>
+
+        <form action="" id="LeaveTower" class="hidden">
+        <h2>You leave the tower as there isn't anything of interest to yo there.</h2>
+        <p>What do you do?</p>
+        <br>
+        <input type="button" value="Go to the campsite." id="" onclick="GoCampsite()">
+        <input type="button" value="Go further into the forest." id="" onclick="GoForest()">    
         </form>
 
         <form action="" id="Campsite" class="hidden">
@@ -38,6 +53,22 @@
         <input type="button" value="Steal some Supplies" id="" onclick="StealCampSupplies()">
         <input type="button" value="Leave the Campsite" id="" onclick="LeaveCampsite()">
         </form>
+
+        <form action="" id="CampRelax" class="hidden">
+        <h2>You relax by the warm fire, you feel alot more refreshed now.</h2>
+        <p>What do you do next?</p>
+        <br>
+        <input type="button" value="Steal some Supplies" id="" onclick="StealCampSupplies()">
+        <input type="button" value="Leave the Campsite" id="" onclick="LeaveCampsite()">    
+        </form>
+
+        <form action="" id="StealCampSupplies" class="hidden">
+        <h2>You find yourself some useful bits and bobs leftover from the campers that could be useful on your journey.</h2>
+        <br>
+        <input type="button" value="Leave the Campsite" id="" onclick="LeaveCampsite()">    
+        </form>
+
+
     </Adam>
     <Ray>
 

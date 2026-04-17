@@ -13,11 +13,6 @@ function GoCampsite()
     document.querySelector("#Campsite").classList.toggle("hidden");
 }
 
-function GoInvestigateTower()
-{
-    document.querySelector("#GoInvestigateTower").classList.toggle("hidden");
-}
-
 function GoOpenTowerChest()
 {
     document.querySelector("#GoOpenTowerChest").classList.toggle("hidden");
