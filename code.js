@@ -12,3 +12,8 @@ function GoRITJ() {
 document.querySelector("#Menu-Start").classList.toggle("hidden");
 document.querySelector("#Ray-Start").classList.remove("hidden");
 }
+
+function FollowTheMap() {
+document.querySelector("#Follow-Map").classList.remove("hidden");
+document.querySelector("#Start").classList.toggle("hidden");
+}

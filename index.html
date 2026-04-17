@@ -11,11 +11,13 @@
         <form action="" id="Menu-Start">        
             <h1 class="Title">Very Cool Text RPG</h1>
             <img src="../Images/background.JPEG" alt="">
+            <p>Choose your first Adventure!</p>
             <br>
-        
-            <input type="button" value="Bane of the Wildnerness" onclick="GoBOTW()">
-            <input type="button" value="Snow Blind" onclick="GoSB()">
-            <input type="button" value="Rumble in the Jungle" onclick="GoRITJ()">
+            <div id="Menu-Buttons">
+                <input type="button" value="Bane of the Wildnerness" onclick="GoBOTW()">
+                <input type="button" value="Snow Blind" onclick="GoSB()">
+                <input type="button" value="Rumble in the Jungle" onclick="GoRITJ()">
+            </div>
         </form>
         
     </main-menu>
@@ -26,8 +28,21 @@
         <h1>Placeholder start for Adams adventure</h1>
     </Adam>
     <Ray action="" id="Ray-Start" class="hidden">
+        <form action="" id="Start">
         <h1>You find yourself standing on the beach of the island that the map in your hands says to start. You see a dotted line stretching a 100 metres into the jungle. </h1>
         <p1>What do you do?</p1>
+        <br>
+        <div id="A1-S1-Buttons">
+        <input type="button" value="Follow the dotted Line!" onclick="FollowTheMap()">
+        <input type="button" value="Stay where you are!">
+        </div>
+        </form>
+        <form action="" id="Follow-Map" class="hidden">
+            <H1> You follow the map. </H1>
+        </form>
+        <form action="" id="Stay-Put" class="hidden">
+                <h1>You Stay where you are.</h1>
+        </form>
         
     </Ray>
     <script src="code.js"></script>

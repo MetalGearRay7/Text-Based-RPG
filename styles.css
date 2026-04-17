@@ -2,15 +2,37 @@
     color: GREEN;
     text-align: center;
 }
-
-div {
-    display: flex;
-    justify-content: center;
-}
 img {
     margin-left: 600px;
 }
-
+p {
+    color: white;
+    text-align: center;
+}
+#Menu-Buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+#Menu-Start {
+    
+}
+#Ray-Start {
+    color: white;
+}
 .hidden {
     display: none;
+}
+#Start {
+    text-align: center;
+}
+#A1-S1-Buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+body {
+    background-color: black;
 }
