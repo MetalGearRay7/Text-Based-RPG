@@ -1,5 +1,7 @@
 //let CurrentArea = document.querySelector("#Start");
-let GoldCoins;
+let GoldCoins = 0;
+
+console.log(GoldCoins);
 
 function GoCozyCabin()
 {
@@ -28,6 +30,9 @@ function GoRest()
 function GoCozySearch()
 {
     document.querySelector("#CozySearch").classList.toggle("hidden");
+    GoldCoins = GoldCoins +7;
+    console.log("gold coins collected " + GoldCoins);
+    
     // You found
 }
 
