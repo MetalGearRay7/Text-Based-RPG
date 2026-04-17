@@ -14,15 +14,15 @@
             <p>Choose your first Adventure!</p>
             <br>
             <div id="Menu-Buttons">
-                <input type="button" value="Bane of the Wildnerness" onclick="GoBOTW()">
-                <input type="button" value="Snow Blind" onclick="GoSB()">
-                <input type="button" value="Rumble in the Jungle" onclick="GoRITJ()">
+                <input type="button" value="Bane of the Wildnerness" onclick="GoBOTW()" id="BOTW-Button">
+                <input type="button" value="Snow Blind" onclick="GoSB()" id="SB-Button">
+                <input type="button" value="Rumble in the Jungle" onclick="GoRITJ()" id="RITJ-Button">
             </div>
         </form>
         
     </main-menu>
     <Jacob action="" id="Jacob-Start" class="hidden">
-        <h1>Placeholder start for Jacobs adventure</h1>
+        <h`1>Placeholder start for Jacobs adventure</h1>
     </Jacob>
     <Adam action="" id="Adam-Start" class="hidden">
         <h1>Placeholder start for Adams adventure</h1>
@@ -30,18 +30,39 @@
     <Ray action="" id="Ray-Start" class="hidden">
         <form action="" id="Start">
         <h1>You find yourself standing on the beach of the island that the map in your hands says to start. You see a dotted line stretching a 100 metres into the jungle. </h1>
-        <p1>What do you do?</p1>
+        <p>What do you do?</p>
         <br>
-        <div id="A1-S1-Buttons">
-        <input type="button" value="Follow the dotted Line!" onclick="FollowTheMap()">
-        <input type="button" value="Stay where you are!">
+        <div id="Start-Buttons">
+        <input type="button" value="Follow the dotted Line!" onclick="FollowTheMap1()">
+        <input type="button" value="Stay where you are!" onclick="StayPut()">
         </div>
         </form>
-        <form action="" id="Follow-Map" class="hidden">
-            <H1> You follow the map. </H1>
-        </form>
+        
         <form action="" id="Stay-Put" class="hidden">
-                <h1>You Stay where you are.</h1>
+                <h1>You Stay where you are, nothing happens!</h1>
+                <p>What do you do?</p>
+                <input type="button" value="Follow the dotted line" onclick="FollowTheMap2()">
+                <input type="button" value="Stay where you are" onclick="StayLonger()">
+        </form>
+
+        <form action="" id="Follow-Map" class="hidden">
+            <div id="Continue1">
+            <h1> You follow the map.</h1>
+            <input type="button" value="continue" onclick="Continue1()">
+            </div>
+            <div id="Continue2" class="hidden">
+            <h1 >After 50m you pass 3 large palm trees.</h1>
+            <input type="button" value="continue" onclick="Continue2()">
+            </div>
+            <div id="Continue3" class="hidden">
+            <h1 >At the end of the 100m, the path breaks off into 2 seperate paths, 
+                The dotted line on the map suggests to take the path on the right but you can see a lake not too far down the left path.</h1>
+            <p>What do you do?</p>
+            <div id="LeftxRight-Buttons">
+            <input type="button" value="Take the left path towards the lake" id="Left-Button">
+            <input type="button" value="Take the right path following the map" id="Right-Button">
+            </div>
+            </div>
         </form>
         
     </Ray>
