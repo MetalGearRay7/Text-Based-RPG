@@ -48,21 +48,30 @@
         <form action="" id="Follow-Map" class="hidden">
             <div id="Continue1">
             <h1> You follow the map.</h1>
-            <input type="button" value="continue" onclick="Continue1()">
+            <input type="button" value="continue" onclick="Continue1()" id="Continue1-Button">
             </div>
             <div id="Continue2" class="hidden">
             <h1 >After 50m you pass 3 large palm trees.</h1>
-            <input type="button" value="continue" onclick="Continue2()">
+            <input type="button" value="continue" onclick="Continue2()" id="Continue2-Button">
             </div>
             <div id="Continue3" class="hidden">
             <h1 >At the end of the 100m, the path breaks off into 2 seperate paths, 
                 The dotted line on the map suggests to take the path on the right but you can see a lake not too far down the left path.</h1>
             <p>What do you do?</p>
             <div id="LeftxRight-Buttons">
-            <input type="button" value="Take the left path towards the lake" id="Left-Button" onclick="">
+            <input type="button" value="Take the left path towards the lake" id="Left-Button" onclick="startCombat('Giant Anaconda', 40)">
             <input type="button" value="Take the right path following the map" id="Right-Button" onclick="">
             </div>
             </div>
+        </form>
+        <form action="" id="Combat" class="hidden">
+            <h1 id="enemy-name-display">Enemy</h1>
+            <p>Enemy HP: <span id="enemy-hp">50</span></p>
+            <p>Your HP: <span id="player-hp">100</span></p>
+            <div id="combat-log" style="height:100px; overflow-y:auto; border: 1px solid #ccc; padding: 4px;"></div>
+            <input type="button" value="Attack" onclick="playerAttack()">
+            <input type="button" value="Flee" onclick="playerFlee()">
+
         </form>
         <form action="" id="Left-Path" class="hidden"></form>
         <form action="" id="Right-Path" clas="hidden"></form>
