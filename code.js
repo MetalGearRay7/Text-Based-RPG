@@ -1,3 +1,12 @@
+let combatState = {
+    active: false,
+    playerHP: 100,
+    playerMaxHP: 100,
+    enemyHP: 50,
+    enemyName: "Giant Ananconda",
+    turn: "player"
+};
+
 function GoBOTW() {
 document.querySelector("#Menu-Start").classList.toggle("hidden");
 document.querySelector("#Adam-Start").classList.remove("hidden");
@@ -38,14 +47,7 @@ document.querySelector("#Continue2-Button").classList.toggle("hidden");
 document.querySelector("#Continue3").classList.remove("hidden");
 }
 
-let combatState = {
-    active: false,
-    playerHP: 100,
-    playerMaxHP: 100,
-    enemyHP: 50,
-    enemyName: "Giant Ananconda",
-    turn: "player"
-};
+
 function startCombat(enemyName, enemyHP) {
     combateState = {
     active: true,
