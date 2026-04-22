@@ -68,7 +68,7 @@ function playerAttack() {
 
     let damage = Math.floor(Math.random() * 15) + 5;
     combatState.enemyHP -= damage;
-    addCombatLog("you attack for ${damage} damage!");
+    addCombatLog(`you attack for ${damage} damage!`);
 
     if(combatState.enemyHP <= 0)
     {
@@ -83,7 +83,7 @@ function playerAttack() {
 function enemyTurn() {
     let damage = Math.floor(Math.random() * 10) + 3;
     combatState.playerHP -= damage;
-    addCombatLog("${combatState.enemyName} hits you for ${damage} damage!")
+    addCombatLog(`${combatState.enemyName} hits you for ${damage} damage!`);
 
     if (combatState.playerHP <= 0) {
         endCombat(false);
@@ -94,7 +94,7 @@ function enemyTurn() {
     updateCombatUI();
 }
 function playerFlee() {
-    let escapes = Math.random > 0.4;
+    let escapes = Math.random() > 0.4;
     if (escapes) {
         addCombatLog("You managed to escape!");
         setTimeout(() => showForm("Ray-Start"), 1000);
@@ -114,13 +114,13 @@ function addCombatLog(msg) {
     const log = document.getElementById("combat-log");
     const entry = document.createElement("p");
     entry.textContent = msg;
-    logappendChild(entry);
+    log.appendChild(entry);
     log.scrollTop = log.scrollHeight;
 }
 function endCombat(playerWon) {
     combatState.active = false;
     if (playerWon) {
-        addCombatLog("Vitory!.")
+        addCombatLog("Victory!.")
         setTimeout(() => { document.querySelector("#Combat").classList.toggle("hidden");
       document.querySelector("#Right-Path").classList.remove("hidden")}, 1500);
     }
@@ -133,5 +133,5 @@ function endCombat(playerWon) {
 function showForm(id) {
     document.querySelectorAll("form").forEach(f => f.classList.add("hidden"));
     const target= document.getElementById(id);
-    if (target) target.classList.remove(hidden);
+    if (target) target.classList.remove("hidden");
 }
