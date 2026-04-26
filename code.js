@@ -1,3 +1,4 @@
+// Ray work start here.
 let combatState = {
     active: false,
     playerHP: 100,
@@ -135,3 +136,4 @@ function showForm(id) {
     const target= document.getElementById(id);
     if (target) target.classList.remove("hidden");
 }
+// Ray work end here.
