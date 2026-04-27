@@ -59,23 +59,51 @@
                 The dotted line on the map suggests to take the path on the right but you can see a lake not too far down the left path.</h1>
             <p>What do you do?</p>
             <div id="LeftxRight-Buttons">
-            <input type="button" value="Take the left path towards the lake" id="Left-Button" onclick="startCombat('Giant Anaconda', 40)">
-            <input type="button" value="Take the right path following the map" id="Right-Button" onclick="">
+            <input type="button" value="Take the left path towards the lake" id="Left-Button" onclick="StartLakeFight()">
+            <input type="button" value="Take the right path following the map" id="Right-Button" onclick="TakeRightPath()">
             </div>
             </div>
         </form>
         <form action="" id="Combat" class="hidden">
+            <h1>You approach the lake, then out of nowhere a Giant Anaconda lunges at you!</h1>
             <h1 id="enemy-name-display">Enemy</h1>
-            <p>Enemy HP: <span id="enemy-hp">50</span></p>
+            <p>Enemy HP: <span id="enemy-hp"></span></p>
             <p>Your HP: <span id="player-hp">100</span></p>
             <div id="combat-log" style="height:100px; overflow-y:auto; border: 1px solid #ccc; padding: 4px;"></div>
             <input type="button" value="Attack" onclick="playerAttack()">
-            <input type="button" value="Flee" onclick="playerFlee()">
+            <input type="button" value="Flee" onclick="playerFlee1()">
 
         </form>
-        <form action="" id="Right-Path" clas="hidden">
-            <h1></h1>
+        <form action="" id="Right-Path" class="hidden">
+            <div id="Continue4">
+                <h1>You continue to follow the map for which seems like an hour.</h1>
+                <input type="button" value="continue" onclick="Continue4()" id="Continue4-Button">
+            </div>
+            <div id="Continue5" class="hidden">
+                <h1>You get to a cave entrance, the maps line leads into the cave.</h1>
+                <input type="button" value="continue" onclick="Continue5()" id="Continue5-Button">
+            </div>
+            <div id="Continue6"class="hidden">
+                <h1>You enter the cave, inside looks like ruins of an ancient civilisation.</h1>
+                <input type="button" value="continue" onclick="Continue6()" id="Continue6-Button">
+            </div>
+            <div id="Continue7" class="hidden">
+                <h1>before you is an intact spiral stair case.</h1>
+                <p>What do you do?</p>
+            <div id="UpxDown-Buttons">
+            <input type="button" value="Take the stairs up!" id="Up-Button" onclick="">
+            <input type="button" value="Take the stairs down!" id="Down-Button" onclick="StartBoneDevilFight()">
+            </div>
+            </div>
         </form>
+        <form action="" id="Combat2" class="hidden">
+            <h1>You take the staircase down, when you reach the bottom you come to dead end. you begin to hear a sound behind you, you turn around and see before you a</h1>
+            <h1 id="enemy-name-display">Enemy</h1>
+            <p>Enemy HP: <span id="enemy-hp">80</span></p>
+            <p>Your HP: <span id="player-hp">100</span></p>
+            <div id="combat-log" style="height:100px; overflow-y:auto; border: 1px solid #ccc; padding: 4px;"></div>
+            <input type="button" value="Attack" onclick="playerAttack()">
+            <input type="button" value="Flee" onclick="playerFlee2()">
         
     </Ray>
     <script src="code.js"></script>

@@ -3,7 +3,7 @@ let combatState = {
     active: false,
     playerHP: 100,
     playerMaxHP: 100,
-    enemyHP: 50,
+    enemyHP: 40,
     enemyName: "Giant Ananconda",
     turn: "player"
 };
@@ -44,23 +44,67 @@ document.querySelector("#Continue1-Button").classList.toggle("hidden");
 document.querySelector("#Continue2").classList.remove("hidden");
 }
 function Continue2() {
-document.querySelector("#Continue2-Button").classList.toggle("hidden");
+document.querySelector("#Continue2-Button").classList.add("hidden");
 document.querySelector("#Continue3").classList.remove("hidden");
 }
+function StartLakeFight() {
+    startCombat('Giant Anaconda', 40, '#Continue3');
+}
+function TakeRightPath() {
+    document.querySelector("#Follow-Map").classList.toggle("hidden");
+    document.querySelector("#Right-Path").classList.remove("hidden");
+}
+function Continue4() {
+    document.querySelector("#Continue4-Button").classList.toggle("hidden");
+    document.querySelector("#Continue5").classList.remove("hidden");
+}
+function Continue5() {
+    document.querySelector("#Continue5-Button").classList.toggle("hidden");
+    document.querySelector("#Continue6").classList.remove("hidden");
+}
+function Continue6() {
+    document.querySelector("#Continue6-Button").classList.toggle("hidden");
+    document.querySelector("#Continue7").classList.remove("hidden");
+}
+function StartBoneDevilFight() {
 
+    document.querySelector("#Right-Path").classList.toggle("hidden");
+    startCombat2('Bone Devil', 80, '#Continue7');
+}
 
-function startCombat(enemyName, enemyHP) {
-    combateState = {
+function startCombat(enemyName, enemyHP, fromSection) {
+    
+    combatState = {
     active: true,
     playerHP: combatState.playerHP,
     playerMaxHP: 100,   
     enemyHP: enemyHP,
     enemyName: enemyName,
-    turn: "player"
+    turn: "player",
+    returnSection: fromSection
+
     };
 
      document.querySelector("#Follow-Map").classList.toggle("hidden");
      document.querySelector("#Combat").classList.remove("hidden"); 
+
+    updateCombatUI();
+}
+function startCombat2(enemyName, enemyHP, fromSection) {
+    
+    combatState = {
+    active: true,
+    playerHP: combatState.playerHP,
+    playerMaxHP: 100,   
+    enemyHP: enemyHP,
+    enemyName: enemyName,
+    turn: "player",
+    returnSection: fromSection
+
+    };
+
+     document.querySelector("#Right-Path").classList.toggle("hidden");
+     document.querySelector("#Combat2").classList.remove("hidden"); 
 
     updateCombatUI();
 }
@@ -94,11 +138,15 @@ function enemyTurn() {
     combatState.turn= "player";
     updateCombatUI();
 }
-function playerFlee() {
+function playerFlee1() {
     let escapes = Math.random() > 0.4;
     if (escapes) {
-        addCombatLog("You managed to escape!");
-        setTimeout(() => showForm("Ray-Start"), 1000);
+        addCombatLog("You managed to escape and continued to follow the map!");
+        setTimeout(() => {
+            document.querySelector("#Combat").classList.add("hidden");
+            document.querySelector("#Right-Path").classList.remove("hidden");
+            
+        }, 1000);
     }
     else {
         addCombatLog("You couldnt get away!");
