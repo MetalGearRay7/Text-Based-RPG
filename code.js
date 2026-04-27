@@ -48,7 +48,7 @@ document.querySelector("#Continue2-Button").classList.add("hidden");
 document.querySelector("#Continue3").classList.remove("hidden");
 }
 function StartLakeFight() {
-    startCombat('Giant Anaconda', 40, '#Continue3');
+    startCombat('Giant Anaconda', 40, '#Continue3', '#Combat', '#Right-Path', 'You slay the serpent and make your way backto the map trail!');
 }
 function TakeRightPath() {
     document.querySelector("#Follow-Map").classList.toggle("hidden");
@@ -68,11 +68,10 @@ function Continue6() {
 }
 function StartBoneDevilFight() {
 
-    document.querySelector("#Right-Path").classList.toggle("hidden");
-    startCombat2('Bone Devil', 80, '#Continue7');
+    startCombat2('Bone Devil', 80, '#Continue7', '#Combat2', '#Up-Path', 'You banish the Bone Devil back to hell and make your way up the stairs!');
 }
 
-function startCombat(enemyName, enemyHP, fromSection) {
+function startCombat(enemyName, enemyHP, fromSection, formId, winSection, winMessage) {
     
     combatState = {
     active: true,
@@ -81,16 +80,19 @@ function startCombat(enemyName, enemyHP, fromSection) {
     enemyHP: enemyHP,
     enemyName: enemyName,
     turn: "player",
-    returnSection: fromSection
+    returnSection: fromSection,
+    formId: formId,
+    winSection: winSection,
+    winMessage: winMessage
 
     };
 
-     document.querySelector("#Follow-Map").classList.toggle("hidden");
-     document.querySelector("#Combat").classList.remove("hidden"); 
+     document.querySelector("#Follow-Map").classList.toggle("hidden"); 
+     document.querySelector(formId).classList.remove("hidden");
 
     updateCombatUI();
 }
-function startCombat2(enemyName, enemyHP, fromSection) {
+function startCombat2(enemyName, enemyHP, fromSection, formId, winSection, winMessage) {
     
     combatState = {
     active: true,
@@ -99,12 +101,14 @@ function startCombat2(enemyName, enemyHP, fromSection) {
     enemyHP: enemyHP,
     enemyName: enemyName,
     turn: "player",
-    returnSection: fromSection
-
+    returnSection: fromSection,
+    formId: formId,
+    winSection: winSection,
+    winMessage: winMessage
     };
 
      document.querySelector("#Right-Path").classList.toggle("hidden");
-     document.querySelector("#Combat2").classList.remove("hidden"); 
+     document.querySelector(formId).classList.remove("hidden");
 
     updateCombatUI();
 }
@@ -143,7 +147,7 @@ function playerFlee1() {
     if (escapes) {
         addCombatLog("You managed to escape and continued to follow the map!");
         setTimeout(() => {
-            document.querySelector("#Combat").classList.add("hidden");
+            document.querySelector("combatState.formId").classList.add("hidden");
             document.querySelector("#Right-Path").classList.remove("hidden");
             
         }, 1000);
@@ -158,9 +162,14 @@ function updateCombatUI() {
     document.getElementById("player-hp").textContent = combatState.playerHP;
     document.getElementById("enemy-hp").textContent = Math.max(0, combatState.enemyHP);
     document.getElementById("enemy-name-display").textContent = combatState.enemyName;
+
+    document.getElementById("player-hp2").textContent = combatState.playerHP;
+    document.getElementById("enemy-hp2").textContent = Math.max(0, combatState.enemyHP);
+    document.getElementById("enemy-name-display2").textContent = combatState.enemyName;
 }
 function addCombatLog(msg) {
-    const log = document.getElementById("combat-log");
+    let logId = combatState.formId === "#Combat2" ? "combat-log2" : "combat-log";
+    const log = document.getElementById(logId);
     const entry = document.createElement("p");
     entry.textContent = msg;
     log.appendChild(entry);
@@ -168,14 +177,16 @@ function addCombatLog(msg) {
 }
 function endCombat(playerWon) {
     combatState.active = false;
+    let currentForm = combatState.formId;
+    let winDest = combatState.winSection;
     if (playerWon) {
-        addCombatLog("Victory!.")
-        setTimeout(() => { document.querySelector("#Combat").classList.toggle("hidden");
-      document.querySelector("#Right-Path").classList.remove("hidden")}, 1500);
+        addCombatLog(combatState.winMessage)
+        setTimeout(() => { document.querySelector(currentForm).classList.toggle("hidden");
+      document.querySelector(winDest).classList.remove("hidden")}, 1500);
     }
     else {
         addCombatLog("You are dead......");
-        setTimeout(() => { document.querySelector("#Combat").classList.toggle("hidden");
+        setTimeout(() => { document.querySelector(currentForm).classList.toggle("hidden");
       document.querySelector("#Ray-Start").classList.remove("hidden")}, 1500);
     }
 }
