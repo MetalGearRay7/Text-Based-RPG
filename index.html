@@ -7,32 +7,151 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <Jacob>
-        <form action="" id="StartSnowMountain">
-        <h2> You follow up the snowy ridden rocks of rock towards the snowy ridden mountains. 
-            There is a path up the mountain and a path to the side which leads to a small cozy looking cabin. </h2>
-        <p> Which path shall you take...? </p>
-        <br>
-        <input type="button" value="Left." onclick="GoCozyCabin()">
-        <input type="button" value="Right." onclick="GoMountain()">
+    <main-menu>
+        <form action="" id="Menu-Start">        
+            <h1 class="Title">Very Cool Text-Based Adventure Game</h1>
+            <img src="../Images/background.JPEG" alt="">
+            <p>Choose your first Adventure!</p>
+            <br>
+            <div id="Menu-Buttons">
+                <input type="button" value="Bane of the Wildnerness" onclick="GoBOTW()" id="BOTW-Button">
+                <input type="button" value="Snow Blind" onclick="GoSB()" id="SB-Button">
+                <input type="button" value="Rumble in the Jungle" onclick="GoRITJ()" id="RITJ-Button">
+            </div>
         </form>
-
-        <form action="" id="CozyCabin" class="hidden">
-        <h2> This cabin sure is cozy. </h2>
-        <p> What would you like to do...? </p>
-        </form>
-
-        <form action="" id="Mountain" class="hidden">
-        <h2> This mountain sure is mountain. </h2>
-        <p> What would you like to do...? </p>
-        </form>
-
+        
+    </main-menu>
+    <Jacob action="" id="Jacob-Start" class="hidden">
+        <h1>Placeholder start for Jacobs adventure</h1>
     </Jacob>
-    <Adam>
-
+    <Adam action="" id="Adam-Start" class="hidden">
+        <h1>Placeholder start for Adams adventure</h1>
     </Adam>
-    <Ray>
+    <Ray action="" id="Ray-Start" class="hidden">
+        <form action="" id="Start">
+        <h1>You find yourself standing on the beach of the island that the map in your hands says to start. You see a dotted line stretching a 100 metres into the jungle. </h1>
+        <p>What do you do?</p>
+        <br>
+        <div id="Start-Buttons">
+        <input type="button" value="Follow the dotted Line!" onclick="FollowTheMap1()">
+        <input type="button" value="Stay where you are!" onclick="StayPut()">
+        </div>
+        </form>
+        
+        <form action="" id="Stay-Put" class="hidden">
+                <h1>You Stay where you are, nothing happens!</h1>
+                <p>What do you do?</p>
+                <input type="button" value="Follow the dotted line" onclick="FollowTheMap2()">
+                <input type="button" value="Stay where you are" onclick="StayLonger()">
+        </form>
 
+        <form action="" id="Follow-Map" class="hidden">
+            <div id="Continue1">
+            <h1> You follow the map.</h1>
+            <input type="button" value="continue" onclick="Continue1()" id="Continue1-Button">
+            </div>
+            <div id="Continue2" class="hidden">
+            <h1 >After 50m you pass 3 large palm trees.</h1>
+            <input type="button" value="continue" onclick="Continue2()" id="Continue2-Button">
+            </div>
+            <div id="Continue3" class="hidden">
+            <h1 >At the end of the 100m, the path breaks off into 2 seperate paths, 
+                The dotted line on the map suggests to take the path on the right but you can see a lake not too far down the left path.</h1>
+            <p>What do you do?</p>
+            <div id="LeftxRight-Buttons">
+            <input type="button" value="Take the left path towards the lake" id="Left-Button" onclick="StartLakeFight()">
+            <input type="button" value="Take the right path following the map" id="Right-Button" onclick="TakeRightPath()">
+            </div>
+            </div>
+        </form>
+
+        <form action="" id="Combat" class="hidden">
+            <h1>You approach the lake, then out of nowhere a Giant Anaconda lunges at you!</h1>
+            <h1 id="enemy-name-display">Enemy</h1>
+            <p>Enemy HP: <span id="enemy-hp"></span></p>
+            <p>Your HP: <span id="player-hp">100</span></p>
+            <div id="combat-log" style="height:100px; overflow-y:auto; border: 1px solid #ccc; padding: 4px;"></div>
+            <input type="button" value="Attack" onclick="playerAttack()">
+            <input type="button" value="Flee" onclick="playerFlee()">
+        </form>
+
+        <form action="" id="Right-Path" class="hidden">
+            <div id="Continue4">
+                <h1>You continue to follow the map for which seems like an hour.</h1>
+                <input type="button" value="continue" onclick="Continue4()" id="Continue4-Button">
+            </div>
+            <div id="Continue5" class="hidden">
+                <h1>You get to a cave entrance, the maps line leads into the cave.</h1>
+                <input type="button" value="continue" onclick="Continue5()" id="Continue5-Button">
+            </div>
+            <div id="Continue6"class="hidden">
+                <h1>You enter the cave, inside looks like ruins of an ancient civilisation.</h1>
+                <input type="button" value="continue" onclick="Continue6()" id="Continue6-Button">
+            </div>
+            <div id="Continue7" class="hidden">
+                <h1>before you is an intact spiral stair case.</h1>
+                <p>What do you do?</p>
+            <div id="UpxDown-Buttons">
+            <input type="button" value="Take the stairs up!" id="Up-Button" onclick="TakeStairsUp()">
+            <input type="button" value="Take the stairs down!" id="Down-Button" onclick="StartBoneDevilFight()">
+            </div>
+            </div>
+        </form>
+
+        <form action="" id="Combat2" class="hidden">
+            <h1>You take the staircase down, when you reach the bottom you come to dead end. you begin to hear a sound behind you, you turn around and see before you a</h1>
+            <h1 id="enemy-name-display2">Enemy</h1>
+            <p>Enemy HP: <span id="enemy-hp2">80</span></p>
+            <p>Your HP: <span id="player-hp2">100</span></p>
+            <div id="combat-log2" style="height:100px; overflow-y:auto; border: 1px solid #ccc; padding: 4px;"></div>
+            <input type="button" value="Attack" onclick="playerAttack()">
+            <input type="button" value="Flee" onclick="playerFlee()">
+        </form>
+
+        <form action="" id="Up-Path" class="hidden">
+                <div id="Continue8">
+                        <h1>You eventually get to the top of the stairs.</h1>
+                        <input type="button" value="continue" onclick="Continue8()" id="Continue8-Button">
+                </div>
+                 <div id="Continue9" class="hidden">
+                        <h1>You make your way into a large room.</h1>
+                        <input type="button" value="continue" onclick="Continue9()" id="Continue9-Button">
+                </div>
+                 <div id="Continue10" class="hidden">
+                        <h1>You see before you the treasure you have been searching for, but! </h1>
+                        <input type="button" value="continue" onclick="Continue10()" id="Continue10-Button">
+                </div>
+                <div id="Continue11" class="hidden">
+                        <h1>lies guarding it is an adult black dragon!</h1>
+                        <p>What do you do!</p>
+                <div id="FightxGoHome-Buttons">
+                <input type="button" value="You are not giving up, Charge it!" id="Fight-Button" onclick="StartBlackDragonFight()">
+                <input type="button" value="Admit your in over your head, Go home!" id="GoHome-Button" onclick="GoHome()">
+                </div>
+                </div>
+        </form>
+        <form action="" id="Combat3" class="hidden">
+            <h1 id="enemy-name-display3">Enemy</h1>
+            <p>Enemy HP: <span id="enemy-hp3">80</span></p>
+            <p>Your HP: <span id="player-hp3">100</span></p>
+            <div id="combat-log3" style="height:100px; overflow-y:auto; border: 1px solid #ccc; padding: 4px;"></div>
+            <input type="button" value="Attack" onclick="playerAttack()">
+            <input type="button" value="Flee" onclick="playerFlee()">
+        </form>
+        <form action="" id="EndingA" class="hidden">
+            <h1>Congratulations all the treasure is yours, You return home a winner!</h1>
+            <input type="button" value="Return to Main Menu" onclick="location.reload()">
+        </form>
+        <form action="" id="EndingB" class="hidden">
+            <h1>Unfortunately you were unable to get the treasure you return home a loser!</h1>
+            <input type="button" value="Return to Main Menu" onclick="location.reload()">
+        </form>
+        <form action="" id="Game-Over" class="hidden">
+            <h1>You are Dead!!!!!!</h1>
+            <input type="button" value="Return to Main Menu" onclick="location.reload()">
+        </form>
+
+        
     </Ray>
     <script src="code.js"></script>
 </body>
