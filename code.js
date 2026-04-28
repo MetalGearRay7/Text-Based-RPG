@@ -70,6 +70,10 @@ function StartBoneDevilFight() {
 
     startCombat2('Bone Devil', 80, '#Continue7', '#Combat2', '#Up-Path', 'You banish the Bone Devil back to hell and make your way up the stairs!');
 }
+function TakeStairsUp() {
+    document.querySelector("#Right-Path").classList.toggle("hidden");
+    document.querySelector("#Up-Path").classList.remove("hidden");
+}
 
 function startCombat(enemyName, enemyHP, fromSection, formId, winSection, winMessage) {
     
@@ -142,14 +146,13 @@ function enemyTurn() {
     combatState.turn= "player";
     updateCombatUI();
 }
-function playerFlee1() {
+function playerFlee() {
     let escapes = Math.random() > 0.4;
     if (escapes) {
         addCombatLog("You managed to escape and continued to follow the map!");
         setTimeout(() => {
-            document.querySelector("combatState.formId").classList.add("hidden");
-            document.querySelector("#Right-Path").classList.remove("hidden");
-            
+            document.querySelector(combatState.formId).classList.add("hidden");
+            document.querySelector(combatState.winSection).classList.remove("hidden");
         }, 1000);
     }
     else {
@@ -158,6 +161,7 @@ function playerFlee1() {
         setTimeout(enemyTurn, 800);
     }
 }
+
 function updateCombatUI() {
     document.getElementById("player-hp").textContent = combatState.playerHP;
     document.getElementById("enemy-hp").textContent = Math.max(0, combatState.enemyHP);

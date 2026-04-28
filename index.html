@@ -64,6 +64,7 @@
             </div>
             </div>
         </form>
+
         <form action="" id="Combat" class="hidden">
             <h1>You approach the lake, then out of nowhere a Giant Anaconda lunges at you!</h1>
             <h1 id="enemy-name-display">Enemy</h1>
@@ -71,9 +72,9 @@
             <p>Your HP: <span id="player-hp">100</span></p>
             <div id="combat-log" style="height:100px; overflow-y:auto; border: 1px solid #ccc; padding: 4px;"></div>
             <input type="button" value="Attack" onclick="playerAttack()">
-            <input type="button" value="Flee" onclick="playerFlee1()">
-
+            <input type="button" value="Flee" onclick="playerFlee()">
         </form>
+
         <form action="" id="Right-Path" class="hidden">
             <div id="Continue4">
                 <h1>You continue to follow the map for which seems like an hour.</h1>
@@ -91,11 +92,12 @@
                 <h1>before you is an intact spiral stair case.</h1>
                 <p>What do you do?</p>
             <div id="UpxDown-Buttons">
-            <input type="button" value="Take the stairs up!" id="Up-Button" onclick="">
+            <input type="button" value="Take the stairs up!" id="Up-Button" onclick="TakeStairsUp()">
             <input type="button" value="Take the stairs down!" id="Down-Button" onclick="StartBoneDevilFight()">
             </div>
             </div>
         </form>
+
         <form action="" id="Combat2" class="hidden">
             <h1>You take the staircase down, when you reach the bottom you come to dead end. you begin to hear a sound behind you, you turn around and see before you a</h1>
             <h1 id="enemy-name-display2">Enemy</h1>
@@ -103,7 +105,15 @@
             <p>Your HP: <span id="player-hp2">100</span></p>
             <div id="combat-log2" style="height:100px; overflow-y:auto; border: 1px solid #ccc; padding: 4px;"></div>
             <input type="button" value="Attack" onclick="playerAttack()">
-            <input type="button" value="Flee" onclick="playerFlee2()">
+            <input type="button" value="Flee" onclick="playerFlee()">
+        </form>
+
+        <form action="" id="Up-Path" class="hidden">
+                <div id="Continue8">
+                        <h1>You eventually get to the top of the stairs</h1>
+                </div>
+        </form>
+
         
     </Ray>
     <script src="code.js"></script>
