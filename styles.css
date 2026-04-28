@@ -1,4 +1,4 @@
-
+/*Rays CSS starts here */
 .Title {
     color: GREEN;
     text-align: center;
@@ -65,25 +65,25 @@ p {
 #Follow-Map {
     text-align: center;
 }
-#LeftxRight-Buttons {
+#LeftxRight-Buttons, #UpxDown-Buttons, #FightxGoHome-Buttons {
     margin-top: 50px;
     display: flex;
     justify-content: center;
     gap: 25px;
 }
-#Left-Button {
+#Left-Button, #Down-Button, #GoHome-Button {
     background-color: red;
     border: solid 2px white;
 }
-#Right-Button {
+#Right-Button, #Up-Button, #Fight-Button {
     background-color: blue;
     border: solid 2px white;
 }
-#Left-Button, #Right-Button {
+#Left-Button, #Right-Button, #Up-Button, #Down-Button, #Fight-Button, #GoHome-Button {
     color: white;
     transition: transform 0.2s ease;
 }
-#Left-Button:hover, #Right-Button:hover {
+#Left-Button:hover, #Right-Button:hover, #Up-Button:hover, #Down-Button:hover, #Fight-Button:hover, #GoHome-Button:hover {
     transform: scale(1.1);
 }
 #enemy-name-display {
@@ -95,6 +95,11 @@ p {
 #Up-Path {
     text-align: center;
 }
+#EndingA, #EndingB, #Game-Over {
+    text-align: center;
+}
 body {
     background-color: black;
 }
+/* Rays CSS ends here */
+

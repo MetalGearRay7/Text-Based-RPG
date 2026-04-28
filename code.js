@@ -1,4 +1,4 @@
-// Rays work starts here.
+// Rays work starts here. 
 let combatState = {
     active: false,
     playerHP: 75,
@@ -88,7 +88,7 @@ function Continue10() {
 }
 function StartBlackDragonFight() {
 
-    startCombat3('Black Dragon', 150, '#Continue11', '#Combat3', '#EndingA', 'You slay the dragon and the treasure is all yours!');
+    startCombat3('Black Dragon', 100, '#Continue11', '#Combat3', '#EndingA', 'You slay the dragon and the treasure is all yours!');
 }
 function GoHome()
 {
@@ -245,7 +245,7 @@ function endCombat(playerWon) {
     else {
         addCombatLog("You are dead......");
         setTimeout(() => { document.querySelector(currentForm).classList.toggle("hidden");
-      document.querySelector("#Ray-Start").classList.remove("hidden")}, 1500);
+      document.querySelector("#Game-Over").classList.remove("hidden")}, 1500);
     }
 }
 function showForm(id) {
@@ -253,4 +253,4 @@ function showForm(id) {
     const target= document.getElementById(id);
     if (target) target.classList.remove("hidden");
 }
-// Ray work end here.
+// Rays work ends here.

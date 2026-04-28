@@ -22,7 +22,7 @@
         
     </main-menu>
     <Jacob action="" id="Jacob-Start" class="hidden">
-        <h`1>Placeholder start for Jacobs adventure</h1>
+        <h1>Placeholder start for Jacobs adventure</h1>
     </Jacob>
     <Adam action="" id="Adam-Start" class="hidden">
         <h1>Placeholder start for Adams adventure</h1>
@@ -124,7 +124,7 @@
                 <div id="Continue11" class="hidden">
                         <h1>lies guarding it is an adult black dragon!</h1>
                         <p>What do you do!</p>
-                <div id="FightxGoHome">
+                <div id="FightxGoHome-Buttons">
                 <input type="button" value="You are not giving up, Charge it!" id="Fight-Button" onclick="StartBlackDragonFight()">
                 <input type="button" value="Admit your in over your head, Go home!" id="GoHome-Button" onclick="GoHome()">
                 </div>
@@ -140,9 +140,15 @@
         </form>
         <form action="" id="EndingA" class="hidden">
             <h1>Congratulations all the treasure is yours, You return home a winner!</h1>
+            <input type="button" value="Return to Main Menu" onclick="location.reload()">
         </form>
         <form action="" id="EndingB" class="hidden">
-            <h1></h1>
+            <h1>Unfortunately you were unable to get the treasure you return home a loser!</h1>
+            <input type="button" value="Return to Main Menu" onclick="location.reload()">
+        </form>
+        <form action="" id="Game-Over" class="hidden">
+            <h1>You are Dead!!!!!!</h1>
+            <input type="button" value="Return to Main Menu" onclick="location.reload()">
         </form>
 
         
