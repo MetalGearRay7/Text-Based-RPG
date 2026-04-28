@@ -1,8 +1,8 @@
-// Ray work start here.
+// Rays work starts here.
 let combatState = {
     active: false,
-    playerHP: 100,
-    playerMaxHP: 100,
+    playerHP: 75,
+    playerMaxHP: 75,
     enemyHP: 40,
     enemyName: "Giant Ananconda",
     turn: "player"
@@ -74,13 +74,34 @@ function TakeStairsUp() {
     document.querySelector("#Right-Path").classList.toggle("hidden");
     document.querySelector("#Up-Path").classList.remove("hidden");
 }
+function Continue8() {
+    document.querySelector("#Continue8-Button").classList.toggle("hidden");
+    document.querySelector("#Continue9").classList.remove("hidden");
+}
+function Continue9() {
+    document.querySelector("#Continue9-Button").classList.toggle("hidden");
+    document.querySelector("#Continue10").classList.remove("hidden");
+}
+function Continue10() {
+    document.querySelector("#Continue10-Button").classList.toggle("hidden");
+    document.querySelector("#Continue11").classList.remove("hidden");
+}
+function StartBlackDragonFight() {
+
+    startCombat3('Black Dragon', 150, '#Continue11', '#Combat3', '#EndingA', 'You slay the dragon and the treasure is all yours!');
+}
+function GoHome()
+{
+    document.querySelector("#Up-Path").classList.toggle("hidden");
+    document.querySelector("#EndingB").classList.remove("hidden");
+}
 
 function startCombat(enemyName, enemyHP, fromSection, formId, winSection, winMessage) {
     
     combatState = {
     active: true,
     playerHP: combatState.playerHP,
-    playerMaxHP: 100,   
+    playerMaxHP: 75,   
     enemyHP: enemyHP,
     enemyName: enemyName,
     turn: "player",
@@ -101,7 +122,7 @@ function startCombat2(enemyName, enemyHP, fromSection, formId, winSection, winMe
     combatState = {
     active: true,
     playerHP: combatState.playerHP,
-    playerMaxHP: 100,   
+    playerMaxHP: 75,   
     enemyHP: enemyHP,
     enemyName: enemyName,
     turn: "player",
@@ -112,6 +133,26 @@ function startCombat2(enemyName, enemyHP, fromSection, formId, winSection, winMe
     };
 
      document.querySelector("#Right-Path").classList.toggle("hidden");
+     document.querySelector(formId).classList.remove("hidden");
+
+    updateCombatUI();
+}
+function startCombat3(enemyName, enemyHP, fromSection, formId, winSection, winMessage) {
+    
+    combatState = {
+    active: true,
+    playerHP: combatState.playerHP,
+    playerMaxHP: 75,   
+    enemyHP: enemyHP,
+    enemyName: enemyName,
+    turn: "player",
+    returnSection: fromSection,
+    formId: formId,
+    winSection: winSection,
+    winMessage: winMessage
+    };
+
+     document.querySelector("#Up-Path").classList.toggle("hidden");
      document.querySelector(formId).classList.remove("hidden");
 
     updateCombatUI();
@@ -170,9 +211,22 @@ function updateCombatUI() {
     document.getElementById("player-hp2").textContent = combatState.playerHP;
     document.getElementById("enemy-hp2").textContent = Math.max(0, combatState.enemyHP);
     document.getElementById("enemy-name-display2").textContent = combatState.enemyName;
+
+    document.getElementById("player-hp3").textContent = combatState.playerHP;
+    document.getElementById("enemy-hp3").textContent = Math.max(0, combatState.enemyHP);
+    document.getElementById("enemy-name-display3").textContent = combatState.enemyName;
 }
 function addCombatLog(msg) {
-    let logId = combatState.formId === "#Combat2" ? "combat-log2" : "combat-log";
+    let logId;
+    if (combatState.formId === "#Combat3") {
+        logId = "combat-log3";
+    } 
+    else if (combatState.formId === "#Combat2") {
+        logId = "combat-log2";
+    } 
+    else {
+        logId = "combat-log";
+    }
     const log = document.getElementById(logId);
     const entry = document.createElement("p");
     entry.textContent = msg;
