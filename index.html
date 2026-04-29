@@ -1,116 +1,107 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bane of the Wilderness</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bane of the Wilderness</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <jacob>
 
-    </jacob>
-    <Adam>
-        <form action="" id="StartLakeside">
-        <h2> You find yourself at a peaceful lakeside, next to it is a dirt path leading out of it, you begin walking down the path.</h2>
-        <h2>The path splits into 2, from the left side it looks like a ruined tower is nearby.</h2>
-        <h2>On the right looks to be a campsite, absent of people.</h2>
-        <p> Which path shall you take...? </p>
-        <br>
-        <input type="button" value="Left." onclick="GoRuinedTower()">
-        <input type="button" value="Right." onclick="GoCampsite()">
-        </form>
+<div class="game">
 
-        <form action="" id="RuinedTower" class="hidden">
-        <h2> The interior of the tower is pretty barren and empty, there is nothing useful here. </h2>
-        <p> What would you like to do...? </p>
-        <br>
-        <input type="button" value="Leave the Tower." id="2" onclick="LeaveTower()">
-        </form>
+  <div id="start" class="scene">
+    <h2>You find yourself at a peaceful lakeside, next to it is a dirt path leading out of it, you begin walking down the path.</h2>
+    <p>The path splits into 2, from the left side it looks like a ruined tower is nearby.</p>
+    <p>On the right looks to be a campsite, absent of people.</p>
+    <p>Which path shall you take...?</p>
+    <button onclick="show('tower')">Left</button>
+    <button onclick="show('camp')">Right</button>
+  </div>
 
-        <form action="" id="LeaveTower" class="hidden">
-        <h2>You leave the tower as there isn't anything of interest to you there.</h2>
-        <p>What do you do?</p>
-        <br>
-        <input type="button" value="Go to the campsite." id="5" onclick="GoCampsite()">
-        <input type="button" value="Go further into the forest." id="6" onclick="GoForest()">    
-        </form>
+  <div id="tower" class="scene">
+    <h2>The interior of the tower is pretty barren and empty, there is nothing useful here.</h2>
+    <p> What would you like to do...? </p>
+    <button onclick="show('afterTower')">Leave the tower</button>
+  </div>
 
-        <form action="" id="Campsite" class="hidden">
-        <h2> The campsite looks cosy, the fire burning brightly. </h2>
-        <p> What would you like to do...? </p>
-        <br>
-        <input type="button" value="Relax by the Fire." id="7" onclick="CampRelax()">
-        <input type="button" value="Leave the Campsite" id="9" onclick="GoForest()">
-        </form>
+  <div id="afterTower" class="scene">
+    <h2>You leave the tower as there isn't anything of interest to you there.</h2>
+    <p>What do you do?</p>
+    <button onclick="show('camp')">Go to the campsite</button>
+    <button onclick="show('forest')">Go further into the forest</button>
+  </div>
 
-        <form action="" id="CampRelax" class="hidden">
-        <h2>You relax by the warm fire, you feel alot more refreshed now.</h2>
-        <p>What do you do next?</p>
-        <br>
-        <input type="button" value="Leave the Campsite" id="11" onclick="GoForest()">    
-        </form>
+  <div id="camp" class="scene">
+    <h2> The campsite looks cosy, the fire burning brightly. </h2>
+    <p> What would you like to do...? </p>
+    <button onclick="show('relax')">Relax by the fire</button>
+    <button onclick="show('forest')">Leave the campsite</button>
+  </div>
 
+  <div id="relax" class="scene">
+    <h2>You relax by the warm fire, you feel alot more refreshed now.</h2>
+    <p>What do you do next?</p>
+    <button onclick="show('forest')">Leave the campsite</button>
+  </div>
 
-        <form action="" id="GoForest" class="hidden">
-        <h2>You keep going through the forest, it's calm and peaceful nothing to see around here.</h2>
-        <br>
-        <input type="button" value="Continue" id="13" onclick="ContinueForward()">
-        </form>
-    
-    <form action="" id="ContinueForward" class="hidden">    
-    <h2>You suddenly encounter a group of bandits, and now they want your money, what do you do?</h2>
-    <p>Choose what you want to do.</p>
-    <select name="" id="#first-move">   
-    <option value="1">Run as fast as you can in hopes you can outrun the arrows flying at you.</option>
-    <option value="2">Submit and give them your money in exchange for you to live another day.</option>
-    <option value="3">Try to disarm one of the bandits and pray that it works.</option>
-    <option value="4">Come up with a different solution to satisfy the bandits.</option>
+  <div id="forest" class="scene">
+    <h2>As you leave suddenly bandits show up and attack! They demand all of your money.</h2>
+    <p>What do you do?</p>
+    <select id="m1">
+      <option value="1">Run as fast as you can in hopes you can outrun the arrows flying at you.</option>
+      <option value="2">Submit and give them your money in exchange for you to live another day.</option>
+      <option value="3">Try to disarm one of the bandits and pray that it works.</option>
+      <option value="4">Come up with a different solution to satisfy the bandits.</option>
     </select>
+    <button onclick="firstMove()">Submit</button>
+  </div>
 
-    <input type="button" value="Submit" onclick=firstMove()>
-    </form>
-
-    <form action="" id="Combat1" class="hidden">
-    <p>You have sucessfully aquired a weapon to defend yourself against the threat, what do you do?</p>
-    <select name="" id="#second-move" class="hidden">
-    <option value="5">Start swinging! Something is gonna be hit eventually.</option>
-    <option value="6">Put yourself in a defensive stance, waiting for the right moment is key to winning for sure.</option>
-    <option value="7">Try to intimidate the bandits into giving up, surely your intimidation skills are good right?</option>    
-    <option value="8">Put your evasive maneuvers to the test, moving around is key to throwing off the enemy.</option>
-
-    <input type="button" value="Submit" onclick=secondMove() class="hidden">
-    </form>
-
-    <form action="" id="Combat2" class="hidden">
-    <p>2 bandits left, finish it off.</p>
-    <select name="" id="#third-move" class="hidden">
-    <option value="9">Keep dodging, doubt you're gonna get hit anytime soon.</option>
-    <option value="10">Switch tactics! Change into an aggresive fighting style.</option>
-    <option value="11">Switch Weapons! A trusty bow and arrow will always hit your target.</option>
-    <option value="12">Throw your sword at one of them and run!</option> 
-    
-    <input type="button" value="Submit" onclick=thirdMove() class="hidden">
-    </form>
+  <div id="fight1" class="scene">
+    <h2>You have sucessfully steal a weapon to defend yourself against the bandits, leaving them both confused and impressed, what do you do?</h2>
+    <select id="m2">
+      <option value="5">Start swinging! Something is gonna be hit eventually.</option>
+      <option value="6">Put yourself in a defensive stance, waiting for the right moment is key to winning for sure.</option>
+      <option value="7">Try to intimidate the bandits into giving up, surely your intimidation skills are good right?</option>
+      <option value="8">Put your evasive maneuvers to the test, moving around is key to throwing off the enemy.</option>
     </select>
+    <button onclick="secondMove()">Submit</button>
+  </div>
 
-        <form action="" id="Settlement" class="hidden">
-        <h2>You venture forth and reach a settlement nearby, perhaps you could get some useful things from there, what should you do?</h2> 
-        <br>
-        <input type="button" value="Go rest" id="16" onclick="GoRest()">   
-        </form>
+  <div id="fight2" class="scene">
+    <h2>Your strategy gets you 2 kills, the other 2 really want you dead now, get ready.</h2>
+    <select id="m3">
+      <option value="9">Keep dodging, doubt you're gonna get hit anytime soon.</option>
+      <option value="10">Switch tactics! Change into an aggresive fighting style.</option>
+      <option value="11">Switch Weapons! A trusty bow and arrow will always hit your target.</option>
+      <option value="12">Throw your sword at one of them and run!</option>
+    </select>
+    <button onclick="thirdMove()">Submit</button>
+  </div>
 
-        <form action="" id="Inn" class="hidden">
-        <h2>You've had a long day, you go to the nearby inn and get yourself a room for the night.</h2> 
-        <br>
-        <input type="button" value="End" id="17" onclick="Inn()">   
-        </form>
+  <div id="win" class="scene">
+    <h2 class="win">You win! You sucessfully escape into the forest.</h2>
+    <button onclick="show('start')">Play Again</button>
+  </div>
 
+  <div id="lose1" class="scene">
+    <h2 class="danger">Unforunately the bandits have killed you.</h2>
+    <button onclick="show('start')">Restart</button>
+  </div>
 
-    </Adam>
-    <Ray>
+  <div id="lose2" class="scene">
+    <h2 class="danger">You died!</h2>
+    <button onclick="show('start')">Restart</button>
+  </div>
 
-    </Ray>
-    <script src="code.js"></script>
+  <div id="lose3" class="scene">
+    <h2 class="danger">You have been defeated.</h2>
+    <button onclick="show('start')">Restart</button>
+  </div>
+
+</div>
+
+<script src="code.js"></script>
 </body>
 </html>

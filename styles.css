@@ -1,12 +1,57 @@
-.hidden{
-    display: none;
+body {
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #ffffff;
 }
 
-#button{
-    color:white;
-    transition: transform 0.2s ease;
+.game {
+  width: 100%;
+  max-width: 800px;
+  padding: 24px;
+  background: rgb(0, 116, 58);
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
-#button:hover{
-    transform: scale (1.1);
+h1 {
+  margin-top: 0;
+}
+
+button,
+select {
+  padding: 10px 14px;
+  margin-top: 8px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 10px;
+}
+
+button {
+  background: #222;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+select {
+  width: 100%;
+  background: #eee;
+}
+
+.win {
+  color: green;
+}
+
+.danger {
+  color: crimson;
 }
