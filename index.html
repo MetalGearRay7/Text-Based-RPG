@@ -50,41 +50,58 @@
         <p> What would you like to do...? </p>
         <br>
         <input type="button" value="Relax by the Fire." id="7" onclick="CampRelax()">
-        <input type="button" value="Steal some Supplies" id="8" onclick="StealCampSupplies()">
-        <input type="button" value="Leave the Campsite" id="9" onclick="LeaveCampsite()">
+        <input type="button" value="Leave the Campsite" id="9" onclick="GoForest()">
         </form>
 
         <form action="" id="CampRelax" class="hidden">
         <h2>You relax by the warm fire, you feel alot more refreshed now.</h2>
         <p>What do you do next?</p>
         <br>
-        <input type="button" value="Steal some Supplies" id="10" onclick="StealCampSupplies()">
-        <input type="button" value="Leave the Campsite" id="11" onclick="LeaveCampsite()">    
+        <input type="button" value="Leave the Campsite" id="11" onclick="GoForest()">    
         </form>
 
-        <form action="" id="StealCampSupplies" class="hidden">
-        <h2>You find yourself some useful bits and bobs leftover from the campers that could be useful on your journey.</h2>
-        <br>
-        <input type="button" value="Leave the Campsite" id="12" onclick="LeaveCampsite()">    
-        </form>
 
-        <form action="" id="ContinueForward" class="hidden">
+        <form action="" id="GoForest" class="hidden">
         <h2>You keep going through the forest, it's calm and peaceful nothing to see around here.</h2>
         <br>
         <input type="button" value="Continue" id="13" onclick="ContinueForward()">
         </form>
+    
+    <form action="" id="Combat" class="hidden">    
+    <h2>You suddenly encounter a group of bandits, and now they want your money, what do you do?</h2>
+    <p>Choose what you want to do.</p>
+    <select name="" id="#first-move">   
+    <option value="1">Run as fast as you can in hopes you can outrun the arrows flying at you.</option>
+    <option value="2">Submit and give them your money in exchange for you to live another day.</option>
+    <option value="3">Try to disarm one of the bandits and pray that it works.</option>
+    <option value="4">Come up with a different solution to satisfy the bandits.</option>
+    </select>
 
-        <form action="" id="KeepGoing" class="hidden">
-        <h2>You see a group of people in the distance, seems to be bandits hunting for food, what should you do?</h2>
-        <br>
-        <input type="button" value="Sneak around" id="14" onclick="SneakAround()">    
-        </form>
+    <input type="button" value="Submit" onclick=firstMove()>
+    </form>
 
-        <form action="" id="Sneaking" class="hidden">
-        <h2>You sneak around the group and when the coast is clear, you run off further along the path.</h2>
-        <br>
-        <input type="button" value="Continue" id="15" onclick="ContinueOnwards()">  
-        </form>
+    <form action="" id="Combat2" class="hidden">
+    <p>You have sucessfully aquired a weapon to defend yourself against the threat, what do you do?</p>
+    <select name="" id="#second-move" class="hidden">
+    <option value="5">Start swinging! Something is gonna be hit eventually.</option>
+    <option value="6">Put yourself in a defensive stance, waiting for the right moment is key to winning for sure.</option>
+    <option value="7">Try to intimidate the bandits into giving up, surely your intimidation skills are good right?</option>    
+    <option value="8">Put your evasive maneuvers to the test, moving around is key to throwing off the enemy.</option>
+
+    <input type="button" value="Submit" onclick=secondMove() class="hidden">
+    </form>
+
+    <form action="" id="Combat3" class="hidden">
+    <p>2 bandits left, finish it off.</p>
+    <select name="" id="#third-move" class="hidden">
+    <option value="9">Keep dodging, doubt you're gonna get hit anytime soon.</option>
+    <option value="10">Switch tactics! Change into an aggresive fighting style.</option>
+    <option value="11">Switch Weapons! A trusty bow and arrow will always hit your target.</option>
+    <option value="12">Throw your sword at one of them and run!</option> 
+    
+    <input type="button" value="Submit" onclick=thirdMove() class="hidden">
+    </form>
+    </select>
 
         <form action="" id="Settlement" class="hidden">
         <h2>You venture forth and reach a settlement nearby, perhaps you could get some useful things from there, what should you do?</h2> 
