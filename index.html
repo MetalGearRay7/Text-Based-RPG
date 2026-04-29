@@ -13,8 +13,8 @@
     <Adam>
         <form action="" id="StartLakeside">
         <h2> You find yourself at a peaceful lakeside, next to it is a dirt path leading out of it, you begin walking down the path.</h2>
-        <h2>The path splits into 2, from the left side it looks like a ruined tower is nearby, it might have something useful inside.</h2>
-        <h2>On the right looks to be a campsite, absent of people, you could rob it of some supplies.</h2>
+        <h2>The path splits into 2, from the left side it looks like a ruined tower is nearby.</h2>
+        <h2>On the right looks to be a campsite, absent of people.</h2>
         <p> Which path shall you take...? </p>
         <br>
         <input type="button" value="Left." onclick="GoRuinedTower()">
@@ -22,23 +22,14 @@
         </form>
 
         <form action="" id="RuinedTower" class="hidden">
-        <h2> The interior of the tower is pretty barren and empty. There seems to be a chest nearby though. </h2>
+        <h2> The interior of the tower is pretty barren and empty, there is nothing useful here. </h2>
         <p> What would you like to do...? </p>
         <br>
-        <input type="button" value="Open the Chest." id="1" onclick="OpenTowerChest()">
         <input type="button" value="Leave the Tower." id="2" onclick="LeaveTower()">
         </form>
 
-        <form action="" id="OpenTowerChest" class="hidden">
-        <h2>As you try to open the chest, it turns out to be a mimic!</h2>
-        <p>What do you do?</p>
-        <br>
-        <input type="button" value="Hit it with your dagger!" id="3" onclick="HitMimic()">
-        <input type="button" value="Run!" id="4" onclick="RunFromTower()">    
-        </form>
-
         <form action="" id="LeaveTower" class="hidden">
-        <h2>You leave the tower as there isn't anything of interest to yo there.</h2>
+        <h2>You leave the tower as there isn't anything of interest to you there.</h2>
         <p>What do you do?</p>
         <br>
         <input type="button" value="Go to the campsite." id="5" onclick="GoCampsite()">
@@ -46,7 +37,7 @@
         </form>
 
         <form action="" id="Campsite" class="hidden">
-        <h2> The campsite looks to have some leftover supplies from the campers, the campfire still burns brightly. </h2>
+        <h2> The campsite looks cosy, the fire burning brightly. </h2>
         <p> What would you like to do...? </p>
         <br>
         <input type="button" value="Relax by the Fire." id="7" onclick="CampRelax()">
@@ -67,7 +58,7 @@
         <input type="button" value="Continue" id="13" onclick="ContinueForward()">
         </form>
     
-    <form action="" id="Combat" class="hidden">    
+    <form action="" id="ContinueForward" class="hidden">    
     <h2>You suddenly encounter a group of bandits, and now they want your money, what do you do?</h2>
     <p>Choose what you want to do.</p>
     <select name="" id="#first-move">   
@@ -80,7 +71,7 @@
     <input type="button" value="Submit" onclick=firstMove()>
     </form>
 
-    <form action="" id="Combat2" class="hidden">
+    <form action="" id="Combat1" class="hidden">
     <p>You have sucessfully aquired a weapon to defend yourself against the threat, what do you do?</p>
     <select name="" id="#second-move" class="hidden">
     <option value="5">Start swinging! Something is gonna be hit eventually.</option>
@@ -91,7 +82,7 @@
     <input type="button" value="Submit" onclick=secondMove() class="hidden">
     </form>
 
-    <form action="" id="Combat3" class="hidden">
+    <form action="" id="Combat2" class="hidden">
     <p>2 bandits left, finish it off.</p>
     <select name="" id="#third-move" class="hidden">
     <option value="9">Keep dodging, doubt you're gonna get hit anytime soon.</option>
