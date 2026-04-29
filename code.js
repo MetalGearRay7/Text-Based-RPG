@@ -3,45 +3,45 @@
 
 function GoRuinedTower()
 {
-    document.querySelector("#RuinedTower").classList.toggle("hidden");
-    document.querySelector("#StartLakeside").classList.toggle("hidden");
+    document.querySelector("#RuinedTower").classList.remove("hidden");
+    document.querySelector("#StartLakeside").classList.remove("hidden");
 }
 
 function GoCampsite()
 {
-    document.querySelector("#Campsite").classList.toggle("hidden");
-    document.querySelector("#StartLakeside").classList.toggle("hidden");
+    document.querySelector("#Campsite").classList.remove("hidden");
+    document.querySelector("#StartLakeside").classList.remove("hidden");
 }
 
 function OpenTowerChest()
 {
-    document.querySelector("#OpenTowerChest").classList.toggle("hidden");
-    document.querySelector("#RuinedTower").classList.toggle("hidden");
+    document.querySelector("#OpenTowerChest").classList.remove("hidden");
+    document.querySelector("#RuinedTower").classList.remove("hidden");
 }
 
 
 function LeaveTower()
 {
-    document.querySelector("#LeaveTower").classList.toggle("hidden");
+    document.querySelector("#LeaveTower").classList.remove("hidden");
     document.querySelector("#RuinedTower").classList.toggle("hidden");
 }
 
 function CampRelax()
 {
-    document.querySelector("#CampRelax").classList.toggle("hidden");
-    document.querySelector("#Campsite").classList.toggle("hidden");
+    document.querySelector("#CampRelax").classList.remove("hidden");
+    document.querySelector("#Campsite").classList.remove("hidden");
 }
 
 
 function GoForest()
 {
-    document.querySelector("#GoForest").classList.toggle("hidden");
-    document.querySelector("#Campsite").classList.toggle("hidden");
+    document.querySelector("#GoForest").classList.remove("hidden");
+    document.querySelector("#Campsite").classList.remove("hidden");
 }
 
 function ContinueForward()
 {
-    document.querySelector("#ContinueForward");
+    document.querySelector("#ContinueForward").classList.remove("hidden");
 }
 
 function firstMove(){
@@ -100,6 +100,10 @@ function thirdMove(){
 }
 
 
+function ContinueForward()
+{
+    document.querySelector("#ContinueForward");
+}
 
 
 
