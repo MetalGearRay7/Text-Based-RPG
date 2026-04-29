@@ -44,3 +44,9 @@ function LeaveCampsite()
     document.querySelector("#LeaveCampsite").classList.toggle("hidden");
     document.querySelector("#Campsite").classList.toggle("hidden");
 }
+
+function ContinueForward()
+{
+    document.querySelector("#ContinueForward").classList.toggle("hidden");
+}
+
