@@ -1,3 +1,4 @@
+//Adams Work Starts Here!
 //https://chatgpt.com/s/t_69f29367e154819191bd00c9edb060a6
 const scene = document.getElementById("scene");
 
@@ -23,3 +24,4 @@ function thirdMove() {
 }
 
 show("start");
+//Adams Work Ends Here!
