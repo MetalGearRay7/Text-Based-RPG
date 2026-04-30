@@ -26,6 +26,146 @@ function thirdMove() {
 show("start");
 //Adams Work Ends Here!
 
+//Jacobs work starts here.
+
+let GoldCoins = 0;
+
+console.log(GoldCoins);
+
+function GoCozyCabin()
+{
+    document.querySelector("#StartSnowMountain").classList.toggle("hidden");
+    document.querySelector("#CozyCabin").classList.toggle("hidden");
+}
+
+function GoMountain()
+{
+    document.querySelector("#StartSnowMountain").classList.toggle("hidden");
+    document.querySelector("#Mountain").classList.toggle("hidden");
+}
+
+function GoStartSnowMountain()
+{
+    document.querySelector("#StartSnowMountain").classList.toggle("hidden");
+    document.querySelector("#CozyCabin").classList.toggle("hidden");
+}
+
+function GoRest()
+{
+    document.querySelector("#CozyBed").classList.toggle("hidden");
+    // You were able to fully rest up but the bed suddenly no longer feels comfy enough to rest on anymore
+}
+
+function GoCozySearch()
+{
+    document.querySelector("#CozySearch").classList.toggle("hidden");
+    GoldCoins = GoldCoins +7;
+    console.log("gold coins collected " + GoldCoins);
+    
+    // You found
+}
+
+function GoMountainSideLeft()
+{
+    document.querySelector("#Mountain").classList.toggle("hidden");
+    document.querySelector("#MountainSideLeft").classList.toggle("hidden");
+}
+
+function GoMountainSideRight()
+{
+    document.querySelector("#Mountain").classList.toggle("hidden");
+    document.querySelector("#MountainSideRight").classList.toggle("hidden");
+}
+
+function GoSearchBodies()
+{
+    document.querySelector("#SearchBodies").classList.toggle("hidden");
+    // You found
+}
+
+function GoMountainCave()
+{
+    document.querySelector("#MountainCave").classList.toggle("hidden");
+    document.querySelector("#MountainSideLeft").classList.toggle("hidden");
+}
+
+function GoMountainSideTop()
+{
+    document.querySelector("#MountainSideLeft").classList.toggle("hidden");
+    document.querySelector("#MountainSideTop").classList.toggle("hidden");
+}
+
+function GoFieryDeath()
+{
+    document.querySelector("#MountainSideTop").classList.toggle("hidden");
+    document.querySelector("#FieryDeath").classList.toggle("hidden");
+}
+
+function GoMountainForestLeft()
+{
+    document.querySelector("#MountainSideRight").classList.toggle("hidden");
+    document.querySelector("#MountainForestLeft").classList.toggle("hidden");
+}
+
+function GoMountainForestRight()
+{
+    document.querySelector("#MountainSideRight").classList.toggle("hidden");
+    document.querySelector("#MountainForestRight").classList.toggle("hidden");
+}
+
+function GoForwardThrust()
+{
+    document.querySelector("#MountainCave").classList.toggle("hidden");
+    document.querySelector("#ForwardThrust").classList.toggle("hidden");
+}
+
+function GoSideSlash()
+{
+    document.querySelector("#MountainCave").classList.toggle("hidden");
+    document.querySelector("#SideSlash").classList.toggle("hidden");
+}
+
+function GoThrowSword()
+{
+    document.querySelector("#MountainCave").classList.toggle("hidden");
+    document.querySelector("#ThrowSword").classList.toggle("hidden");
+}
+
+function GameOver()
+{
+    document.querySelector("#Start").classList.toggle("hidden");
+    document.querySelector("#ThrowSword").classList.add("hidden");
+    document.querySelector("#SideSlash").classList.add("hidden");
+    document.querySelector("#ForwardThrust").classList.add("hidden");
+    document.querySelector("#FieryDeath").classList.add("hidden");
+}
+
+function GoCaveExit()
+{
+    document.querySelector("#ThrowSword").classList.toggle("hidden");
+    document.querySelector("#ExitCave").classList.toggle("hidden");
+}
+
+function GoEnterTower()
+{
+    document.querySelector("#MountainForestLeft").classList.add("hidden");
+    document.querySelector("#ExitCave").classList.add("hidden");
+    document.querySelector("#EnterTower").classList.toggle("hidden");
+}
+
+function GoPullRug()
+{
+    document.querySelector("#EnterTower").classList.toggle("hidden");
+    document.querySelector("#PullRug").classList.toggle("hidden");
+}
+
+function GameOver()
+{
+    show("start")
+}
+
+//Jacobs work ends here.
+
 // Rays work starts here. 
 let combatState = {
     active: false,
