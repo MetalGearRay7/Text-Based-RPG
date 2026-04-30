@@ -133,11 +133,13 @@ function GoThrowSword()
 
 function GameOver()
 {
-    document.querySelector("#Start").classList.toggle("hidden");
+    document.querySelector("#Menu-Start").classList.toggle("hidden");
     document.querySelector("#ThrowSword").classList.add("hidden");
     document.querySelector("#SideSlash").classList.add("hidden");
     document.querySelector("#ForwardThrust").classList.add("hidden");
     document.querySelector("#FieryDeath").classList.add("hidden");
+    document.querySelector("#MountainForestRight").classList.add("hidden");
+    document.querySelector("#SB-Button").classList.toggle("hidden");
 }
 
 function GoCaveExit()
@@ -157,11 +159,6 @@ function GoPullRug()
 {
     document.querySelector("#EnterTower").classList.toggle("hidden");
     document.querySelector("#PullRug").classList.toggle("hidden");
-}
-
-function GameOver()
-{
-    show("start")
 }
 
 //Jacobs work ends here.
