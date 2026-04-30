@@ -76,6 +76,11 @@ function GoMountainForestRight()
     document.querySelector("#MountainSideRight").classList.toggle("hidden");
 }
 
+// function StartLakeFight() {
+//     startCombat('Giant Anaconda', 40, '#Continue3', '#Combat', '#Right-Path', 'You slay the serpent and make your way backto the map trail!');
+// }
+
+
 // function startCombat(enemyName, enemyHP) {
 //     combateState = {
 //     active: true,
