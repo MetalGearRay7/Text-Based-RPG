@@ -9,7 +9,22 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- <Adam action="" id="Adam-Start" class="hidden">
+  <main-menu>
+        <form action="" id="Menu-Start">        
+            <h1 class="Title">Very Cool Text-Based Adventure Game</h1>
+            <img src="../Images/background.JPEG" alt="">
+            <p>Choose your first Adventure!</p>
+            <br>
+            <div id="Menu-Buttons">
+                <input type="button" value="Bane of the Wildnerness" onclick="GoBOTW()" id="BOTW-Button">
+                <input type="button" value="Snow Blind" onclick="GoSB()" id="SB-Button">
+                <input type="button" value="Rumble in the Jungle" onclick="GoRITJ()" id="RITJ-Button">
+            </div>
+        </form>
+        
+    </main-menu>
+
+<Adam action="" id="Adam-Start" class="hidden">
 <div class="game">
 
   <div id="start" class="scene">
@@ -101,7 +116,7 @@
     <button onclick="show('start')">Restart</button>
   </div>
 
-</div>
+  </div>
 </Adam>
 <Ray action="" id="Ray-Start" class="hidden">
         <form action="" id="Start">
@@ -230,7 +245,7 @@
         
     </Ray>
 
-<script src="code.js"></script>
+  <script src="code.js"></script>
 </body>
 </html>
 //Adams Work Ends Here!
