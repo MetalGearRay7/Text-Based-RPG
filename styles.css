@@ -50,7 +50,7 @@ select {
 }
 
 .win {
-  color: green;
+  color: rgb(131, 255, 131);
 }
 
 .danger {
