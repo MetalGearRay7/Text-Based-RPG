@@ -25,6 +25,7 @@ function thirdMove() {
 
 show("start");
 //Adams Work Ends Here!
+
 // Rays work starts here. 
 let combatState = {
     active: false,
