@@ -51,6 +51,92 @@
         <input type="button" value="Left." onclick="GoMountainForestLeft()">
         <input type="button" value="Right." onclick="GoMountainForestRight()">
         </form>
+
+        <form action="" id="MountainForestRight" class="hidden">
+        <h2> You decide to take the right side once again. <br> you continue walking until you suddenly hear a large metal coming from on whatever you accidentally stood on. <br>
+            You look down at the ground and see a bear trap had chopped of your left foot </h2>
+        <p> needless to say you eventually bleed out and die since you dont have anything to stop the bleeding. </p>
+        <input type="button" value="Damn." onclick="GameOver()">
+        </form>
+
+        <form action="" id="MountainForestLeft" class="hidden">
+        <h2> You decide to take the left side. <br> you enjoy a peaceful stroll through the snowy forest. <br>
+            When you get to the end of the forest you see a sign that says "Danger: Bear traps in forest." <br>
+            Wow someone should really put that sign up in more visible spots around the forest as that almost could've gone bad for you. </h2>
+        <p> You see the back of a tall ominous tower in the distance, you head towards it. </p>
+        <input type="button" value="Enter the tower." onclick="GoEnterTower()">
+        </form>
+
+        <form action="" id="MountainCave" class="hidden">
+        <h2> You head inside the mountain's cave and see a Yeti! <br>
+            He is currently looks down at you menacinly, his form towers over your own.</h2>
+        <p> How would you like to handle this? </p>
+        <input type="button" value="Forward thrust." onclick="GoForwardThrust()">
+        <input type="button" value="Dashing side slash." onclick="GoSideSlash()">
+        <input type="button" value="Throw your sword at him." onclick="GoThrowSword()">
+        </form>
+
+        <form action="" id="ForwardThrust" class="hidden">
+        <h2> You attempt to thrust your sword into his chest with all your might<br>
+            The sword goes deep into his stomach and he looks completely unphased.</h2>
+        <p> He backhands your head with such a force that it cranes your head back enough for your neck to snap. You die.</p>
+        <input type="button" value="Damn." onclick="GameOver()">
+        </form>
+        
+        <form action="" id="SideSlash" class="hidden">
+        <h2> You attempt to dash to his left side with your sword in position to slash him as you dash <br>
+            The sword goes slashes his side succesfully but doesnt go deep enough to do any real damage.</h2>
+        <p> He kicks you into the cave wall, causing you to fall down. He then walks over to you as your on the ground and flattens your head with a single stomp. You die.</p>
+        <input type="button" value="Damn." onclick="GameOver()">
+        </form>
+
+        <form action="" id="ThrowSword" class="hidden">
+        <h2> You awkwardly fling your sword at him in a pathetic way. <br>
+            To your surprise the sword spins midair and lands itself into his left eye.</h2>
+        <p> The sword also goes deep enough to pierce itself past his eye and into his brain. The yeti falls down and dies instantly.</p>
+        <input type="button" value="Continue through the cave." onclick="GoCaveExit()">
+        </form>
+
+        <form action="" id="ExitCave" class="hidden">
+        <h2> You make your way through the cave and finally exit it at the end.</h2>
+        <p> You find yourself on top of the mountain and see a tall ominous tower in front of you.</p>
+        <input type="button" value="Enter the tower." onclick="GoEnterTower()">
+        </form>
+
+        <form action="" id="EnterTower" class="hidden">
+        <h2> You make your way up the tower and reach its top.</h2>
+        <p> You see a evil wizard at the top floor of the tower, he tells you his name is "John Snow Blind" and that he is the master of this snowy mountain and he says it is time for you to disappear.
+            <br> You can see he is standing on a large conventiently placed rug. <br> What shall you do?
+        </p>
+        <input type="button" value="Pull the rug." onclick="GoPullRug()">
+        <input type="button" value="Pull the rug." onclick="GoPullRug()">
+        <input type="button" value="Pull the rug." onclick="GoPullRug()">
+        </form>
+
+        <form action="" id="PullRug" class="hidden">
+        <h2> You pull the rug he is standing on.</h2>
+        <p> He slips backwards from the sudden loss of balance and falls down onto the stone floor of the tower.
+            <br> The back of his head makes contact with the floor first. You hear a crack and he stops moving and lays motionless on the floor.
+        </p>
+        <input type="button" value="You win." onclick="GameOver()">
+        </form>
+
+        <form action="" id="MountainSideTop" class="hidden">
+        <h2> You reach the top of the mountain.</h2>
+        <p> You can see a tall tower in the distance and also a large ball of fire that seems to have been shot from the window of the towers top floor.
+            <br> Weird, it almost seems like that large ball of fire is heading towards you, but that cant possible be true right...?</p>
+        <input type="button" value="Oh no." onclick="GoFieryDeath()">
+        </form>
+
+        <form action="" id="FieryDeath" class="hidden">
+        <h2> The ball of fire engulfs you.</h2>
+        <p> Your mind is filled with nothing but the pain of your skin burning and your muscles shrinking painfully beneath your burnt skin.
+            <br> Everything thing eventually goes black, that is when your eyeballs melt in your skull first of course.</p>
+        <input type="button" value="Damn." onclick="GameOver()">
+        </form>
+
+
+        
         
         <!-- <form action="" id="Combat" class="hidden">
             <h1 id="enemy-name-display">Enemy</h1>
